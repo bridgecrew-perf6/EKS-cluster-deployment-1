@@ -1,0 +1,17 @@
+apiversion: apps/v1
+kind: Deployment
+metadata: 
+  name: python-webapplication
+spec: 
+  replicas: 6
+  selector: 
+    matchLabels:
+	  app: python-webapplication
+  template:
+	  metadata:
+	    labels: 
+	      app: python-webapplication
+	spec: 
+      containers: 
+      - name: python-webapplication
+        image: python	  
